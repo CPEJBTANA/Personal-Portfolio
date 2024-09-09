@@ -22,4 +22,50 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", handleScroll);
+
+  // Typing effect code
+  const titles = [
+    "Front-End Developer",
+    "Graphic Designer",
+    "Computer Engineer",
+  ];
+  let currentTitleIndex = 0;
+  let currentCharIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 150;
+  const erasingSpeed = 100;
+  const delayBetweenTitles = 2000;
+  const typingElement = document.querySelector(".typing-effect");
+
+  function type() {
+    const currentTitle = titles[currentTitleIndex];
+    if (isDeleting) {
+      typingElement.textContent = currentTitle.substring(
+        0,
+        currentCharIndex - 1
+      );
+      currentCharIndex--;
+      if (currentCharIndex === 0) {
+        isDeleting = false;
+        currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(type, erasingSpeed);
+      }
+    } else {
+      typingElement.textContent = currentTitle.substring(
+        0,
+        currentCharIndex + 1
+      );
+      currentCharIndex++;
+      if (currentCharIndex === currentTitle.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenTitles);
+      } else {
+        setTimeout(type, typingSpeed);
+      }
+    }
+  }
+
+  setTimeout(type, typingSpeed);
 });

@@ -59,12 +59,17 @@
       display: flex;
       align-items: center;
       margin-right: 30px;
+      flex-direction: column;
       p {
         font-size: 1em;
         color: $paragraph-font-color;
         text-align: justify;
         font-family: Arial, Helvetica, sans-serif;
         animation: slideIn 2s ease-in-out;
+
+        @media screen and (max-width: 600px) {
+          text-align: justify;
+        }
       }
     }
 
@@ -91,4 +96,34 @@
       }
     }
   }
+}
+
+/* Add this to your existing CSS file */
+.download-cv-link {
+  display: block;
+  text-align: right; /* Aligns the link (and button) to the right */
+  margin-top: 20px;
+  margin-left: auto;
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
+    margin-left: 0px; /* Aligns the link (and button) to the center on smaller screens */
+  }
+}
+
+.download-cv-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
+
+.download-cv-button:hover {
+  background-color: #0056b3;
 }

@@ -183,6 +183,7 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
+  flex-direction: column;
 }
 .About .AboutContainer .Abouttext p {
   font-size: 1em;
@@ -190,6 +191,11 @@
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
   animation: slideIn 2s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .About .AboutContainer .Abouttext p {
+    text-align: justify;
+  }
 }
 @media (max-width: 600px) {
   .About .AboutContainer {
@@ -212,6 +218,37 @@
   .About .AboutContainer .Abouttext p {
     text-align: center;
   }
+}
+
+/* Add this to your existing CSS file */
+.download-cv-link {
+  display: block;
+  text-align: right; /* Aligns the link (and button) to the right */
+  margin-top: 20px;
+  margin-left: auto;
+}
+@media screen and (max-width: 600px) {
+  .download-cv-link {
+    text-align: center;
+    margin-left: 0px; /* Aligns the link (and button) to the center on smaller screens */
+  }
+}
+
+.download-cv-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
+
+.download-cv-button:hover {
+  background-color: #0056b3;
 }
 
 .Skills {
@@ -513,6 +550,11 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   animation: slideIn 2s ease-in-out;
 }
+@media (max-width: 600px) {
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
 
 .Contact {
   width: 100%;
@@ -630,4 +672,22 @@ header {
   font-size: 1rem;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.typing-effect {
+  font-size: 24px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }/*# sourceMappingURL=styling.css.map */
