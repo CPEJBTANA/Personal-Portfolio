@@ -12,7 +12,7 @@ $paragraph-font-family: Arial, Helvetica, sans-serif;
 $nav-font-size: 1rem;
 $nav-font-color: white;
 $nav-font-family: Arial, Helvetica, sans-serif;
-
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "./Works";
 @import "./About";
 @import "./Skills";
@@ -151,6 +151,7 @@ header {
     font-size: $hero-font-size;
     color: $hero-font-color;
     animation: slideIn 1.5s ease-in-out;
+    font-family: "Kanit", sans-serif;
 
     @media (max-width: 600px) {
       font-size: 5.5rem;
@@ -158,10 +159,10 @@ header {
   }
 
   p {
-    font-size: $paragraph-font-size;
+    font-size: 2rem;
     color: $paragraph-font-color;
     text-align: justify;
-    font-family: $paragraph-font-family;
+    font-family: Arial, Helvetica, sans-serif;
     animation: slideIn 2s ease-in-out;
   }
 }

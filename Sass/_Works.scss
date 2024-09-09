@@ -106,7 +106,7 @@
 
 .TextInfo {
   width: 80%;
-  height: 30%;
+  height: 40%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -116,6 +116,7 @@
   white-space: normal; // Allow text to wrap
   word-wrap: break-word;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
 
   @media screen and (max-width: 600px) {
     width: 90%;
