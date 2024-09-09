@@ -89,7 +89,7 @@
 }
 @media screen and (max-width: 600px) {
   .Preview {
-    width: 50%;
+    width: 75%;
     height: 60%;
   }
 }
@@ -503,7 +503,7 @@ header {
 }
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 5.5rem;
+    font-size: 3rem;
   }
 }
 .hero p {
