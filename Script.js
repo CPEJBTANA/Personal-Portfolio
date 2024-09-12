@@ -69,3 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(type, typingSpeed);
 });
+document
+  .getElementById("download-cv-link")
+  .addEventListener("click", function () {
+    alert("CV Downloading...");
+  });
