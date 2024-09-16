@@ -78,12 +78,15 @@
       height: auto;
       align-items: center;
       text-align: center;
+      //outline: 2px solid red;
+      margin-top: 20px;
+      margin-bottom: 10px;
 
       .AboutPicContainer {
         width: 80%;
         height: auto;
         margin-bottom: 20px; // Add some space between elements
-        margin-top: 10px;
+        margin-top: 20px; // Add some space between elements
       }
 
       .Abouttext {
