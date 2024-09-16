@@ -87,6 +87,7 @@ header {
     @media screen and (max-width: 600px) {
       column-gap: 10px;
       margin-top: 40px;
+      display: none;
     }
 
     a {
@@ -237,7 +238,7 @@ header {
 
     .contactcontent {
       width: 100%;
-      margin-bottom: 20px; // Add some space between elements
+      margin-bottom: 50px; // Add some space between elements
       h1 {
         font-size: 1.75rem; // Adjust font size for smaller screens
       }
@@ -261,7 +262,7 @@ header {
   @media (max-width: 600px) {
     height: 100px; /* Adjust height for smaller screens */
     width: 100px; /* Adjust width for smaller screens */
-    margin-bottom: 20px; // Add some space between elements
+    margin-bottom: 0px; // Add some space between elements
   }
 }
 .footer {
@@ -305,4 +306,52 @@ header {
   50% {
     border-color: orange;
   }
+}
+
+.burger-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .burger-icon {
+    display: flex;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.BurgerMenuPop {
+  list-style-type: none;
+  height: 100vh;
+  width: 75%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 100;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.BurgerMenuPop.active {
+  transform: translateX(0);
+}
+
+.BurgerMenuPop a {
+  font-size: 1.5rem;
+  color: $hero-font-color;
+  text-decoration: none;
+}
+
+.BurgerMenuPop a:hover {
+  color: $hero-font-color;
 }
