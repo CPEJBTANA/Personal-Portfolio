@@ -1,6 +1,6 @@
 .About {
   width: 100%;
-  height: 100vh;
+  height: auto;
   // outline: 2px solid red;
   margin: auto;
   display: flex;
@@ -78,11 +78,15 @@
       height: auto;
       align-items: center;
       text-align: center;
+      //outline: 2px solid red;
+      margin-top: 20px;
+      margin-bottom: 10px;
 
       .AboutPicContainer {
-        width: 100%;
+        width: 80%;
         height: auto;
         margin-bottom: 20px; // Add some space between elements
+        margin-top: 20px; // Add some space between elements
       }
 
       .Abouttext {
@@ -91,7 +95,7 @@
         margin-right: 0;
         align-items: center;
         p {
-          text-align: center; // Center text for better readability on small screens
+          text-align: justify; // Center text for better readability on small screens
         }
       }
     }

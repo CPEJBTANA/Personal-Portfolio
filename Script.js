@@ -74,3 +74,14 @@ document
   .addEventListener("click", function () {
     alert("CV Downloading...");
   });
+
+function toggleMenu() {
+  const burgerMenu = document.querySelector(".BurgerMenuPop");
+  burgerMenu.classList.toggle("active");
+}
+
+document.querySelectorAll(".BurgerMenuPop a").forEach((link) => {
+  link.addEventListener("click", function () {
+    toggleMenu();
+  });
+});

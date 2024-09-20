@@ -8,6 +8,8 @@
   background-color: rgb(0, 0, 0);
   flex-direction: row;
   opacity: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .Works.visible {
   opacity: 1;
@@ -128,7 +130,7 @@
 
 .About {
   width: 100%;
-  height: 100vh;
+  height: auto;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -203,11 +205,14 @@
     height: auto;
     align-items: center;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   .About .AboutContainer .AboutPicContainer {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   .About .AboutContainer .Abouttext {
     width: 100%;
@@ -216,7 +221,7 @@
     align-items: center;
   }
   .About .AboutContainer .Abouttext p {
-    text-align: center;
+    text-align: justify;
   }
 }
 
@@ -288,8 +293,8 @@
 }
 
 .SkillDesc {
-  width: 40%;
-  height: 90%;
+  width: 35%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -307,7 +312,7 @@
 }
 .SkillDesc .SkillText {
   width: 70%;
-  height: 90%;
+  height: auto;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -317,13 +322,13 @@
 }
 .SkillDesc .SkillText h1 {
   color: white;
-  font-size: 4rem;
+  font-size: 3.75rem;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 .SkillDesc .SkillText p {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -333,10 +338,10 @@
     height: auto;
   }
   .SkillDesc .SkillText h1 {
-    font-size: 5rem; /* Larger h1 for better mobile visibility */
+    font-size: 4rem; /* Larger h1 for better mobile visibility */
     text-align: center;
     color: black;
-    margin-bottom: 20px; /* Adds space between h1 and logos */
+    margin-bottom: 0px; /* Adds space between h1 and logos */
   }
   .SkillDesc .SkillText p {
     display: none; /* Hide the paragraph on mobile */
@@ -361,7 +366,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
 }
 @media (max-width: 600px) {
@@ -475,6 +480,7 @@ header {
     -moz-column-gap: 10px;
          column-gap: 10px;
     margin-top: 40px;
+    display: none;
   }
 }
 .NavigationContainer .Navigation a {
@@ -624,7 +630,7 @@ header {
   }
   .ContactContainer .contactcontent {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .ContactContainer .contactcontent h1 {
     font-size: 1.75rem;
@@ -648,7 +654,7 @@ header {
   .PicContainer {
     height: 100px; /* Adjust height for smaller screens */
     width: 100px; /* Adjust width for smaller screens */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 }
 
@@ -690,4 +696,50 @@ header {
   50% {
     border-color: orange;
   }
+}
+.burger-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .burger-icon {
+    display: flex;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+.BurgerMenuPop {
+  list-style-type: none;
+  height: 100vh;
+  width: 75%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 100;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.BurgerMenuPop.active {
+  transform: translateX(0);
+}
+
+.BurgerMenuPop a {
+  font-size: 1.5rem;
+  color: #00dbdb;
+  text-decoration: none;
+}
+
+.BurgerMenuPop a:hover {
+  color: #00dbdb;
 }/*# sourceMappingURL=styling.css.map */
