@@ -1,3 +1,17 @@
+$(document).ready(function () {
+  function toggleMenu() {
+    $(".BurgerMenuPop").toggleClass("active");
+  }
+
+  $(".burger-icon").on("click", function () {
+    toggleMenu();
+  });
+
+  $(".BurgerMenuPop a").on("click", function () {
+    toggleMenu();
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const aboutSection = document.querySelector(".About");
   const WorksSection = document.querySelector(".Works");
@@ -74,14 +88,3 @@ document
   .addEventListener("click", function () {
     alert("CV Downloading...");
   });
-
-function toggleMenu() {
-  const burgerMenu = document.querySelector(".BurgerMenuPop");
-  burgerMenu.classList.toggle("active");
-}
-
-document.querySelectorAll(".BurgerMenuPop a").forEach((link) => {
-  link.addEventListener("click", function () {
-    toggleMenu();
-  });
-});
